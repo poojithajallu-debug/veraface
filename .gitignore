@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+backend/venv/
+ENV/
+
+# Large model artifacts (> 100MB blocked by GitHub)
+*.pkl
+backend/weights/random_forest.pkl
+
+# Temporary uploads and checkpoints
+backend/uploads/*.jpg
+backend/uploads/*.JPG
+backend/uploads/*.jpeg
+backend/uploads/*.png
+backend/uploads/*.PNG
+!backend/uploads/.gitkeep
+training/checkpoints/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

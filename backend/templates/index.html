@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VeraFace - Face Authenticity Detection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            VeraFace
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#verify">Verify</a>
+            <a href="#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- HOME SECTION -->
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <p class="tagline">
+                    AI-POWERED FACE AUTHENTICITY
+                </p>
+
+                <h1>
+                    Verify Whether a Face<br>
+                    Is Real or Fake
+                </h1>
+
+                <p class="description">
+                    VeraFace analyzes facial images and provides
+                    an authenticity prediction.
+                </p>
+
+                <a href="#verify" class="primary-button">
+                    Verify a Face
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- VERIFY SECTION -->
+        <section id="verify" class="verify-section">
+
+            <div class="section-heading">
+
+                <p class="tagline">
+                    FACE VERIFICATION
+                </p>
+
+                <h2>Upload a Face Image</h2>
+
+                <p>Select an image to analyze.</p>
+
+            </div>
+
+
+            <div class="verification-card">
+
+                <!-- UPLOAD AREA -->
+                <div id="upload-area" class="upload-area">
+
+                    <div class="upload-icon">+</div>
+
+                    <h3>Upload Face Image</h3>
+
+                    <p>JPG, JPEG or PNG</p>
+
+                    <input
+                        type="file"
+                        id="image-input"
+                        accept="image/png,image/jpeg"
+                        hidden
+                    >
+
+                    <button
+                        type="button"
+                        id="choose-button"
+                        class="secondary-button">
+                        Choose Image
+                    </button>
+
+                </div>
+
+
+                <!-- IMAGE PREVIEW -->
+                <div id="preview-container"
+                     class="preview-container hidden">
+
+                    <img
+                        id="image-preview"
+                        src=""
+                        alt="Selected face image"
+                    >
+
+                    <button
+                        type="button"
+                        id="remove-button"
+                        class="remove-button">
+                        Remove Image
+                    </button>
+
+                </div>
+
+
+                <!-- VERIFY BUTTON -->
+                <button
+                    type="button"
+                    id="verify-button"
+                    class="verify-button"
+                    disabled>
+                    Verify Face
+                </button>
+
+
+                <!-- LOADING -->
+                <div id="loading" class="loading hidden">
+                    Analyzing image...
+                </div>
+
+
+                <!-- ERROR MESSAGE -->
+                <div id="error-message"
+                     class="error-message hidden">
+                </div>
+
+
+                <!-- VERIFICATION RESULT -->
+                <div id="result" class="result hidden">
+
+                    <h2>Verification Result</h2>
+
+                    <div class="result-row">
+                        <span>Prediction</span>
+                        <strong id="prediction">--</strong>
+                    </div>
+
+                    <div class="result-row">
+                        <span>Real Probability</span>
+                        <strong id="real-probability">--</strong>
+                    </div>
+
+                    <div class="result-row">
+                        <span>Fake Probability</span>
+                        <strong id="fake-probability">--</strong>
+                    </div>
+
+                    <div class="result-row">
+                        <span>Model Confidence</span>
+                        <strong id="model-confidence">--</strong>
+                    </div>
+
+                    <div class="result-row">
+                        <span>Verification ID</span>
+                        <strong id="verification-id">--</strong>
+                    </div>
+
+                    <p id="result-note" class="result-note"></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about-section">
+
+            <p class="tagline">ABOUT VERAFACE</p>
+
+            <h2>
+                AI-Based Face Authenticity Verification
+            </h2>
+
+            <p>
+                VeraFace is designed to analyze facial images
+                and identify whether they are authentic or
+                artificially generated.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>© 2026 VeraFace</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
